@@ -1,0 +1,17 @@
+.pw-suggestion-box {
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.pw-suggestion-box li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.pw-suggestion-box li:hover {
+    background: #f0f0f0;
+}
