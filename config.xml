@@ -4,8 +4,7 @@
     <displayName>PostcodeWizard</displayName>
     <version>1.0.0</version>
     <author>FlowEngine</author>
-    <description>Automatische adresaanvulling op basis van postcode + huisnummer.</description>
-    <tab>front_office_features</tab>
+    <description><![CDATA[Zoek een adres of vul je postcode + huisnummer in, PostcodeWizard vult de rest automagisch aan.]]></description>    <tab>front_office_features</tab>
     <need_instance>0</need_instance>
     <is_configurable>1</is_configurable>
     <ps_versions_compliancy>

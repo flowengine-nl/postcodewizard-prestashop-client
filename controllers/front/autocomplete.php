@@ -1,7 +1,17 @@
 <?php
+/**
+ * PostcodeWizard Module
+ *
+ * @author    FlowEngine
+ * @copyright Copyright (c) 2025 FlowEngine
+ * @license   https://opensource.org/licenses/MIT MIT License
+ */
 
 require_once __DIR__ . '/classes/PostcodeWizardHelper.php';
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 class PostcodeWizardAutocompleteModuleFrontController extends ModuleFrontController
 {
     public function initContent()

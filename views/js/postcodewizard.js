@@ -1,3 +1,11 @@
+/**
+ * PostcodeWizard Module
+ *
+ * @author    Xeropex
+ * @copyright Copyright (c) 2025 Xeropex
+ * @license   https://opensource.org/licenses/MIT MIT License
+ */
+
 document.addEventListener('DOMContentLoaded', function () {
     if (typeof postcodewizard_mode === 'undefined') return;
     const mode = postcodewizard_mode;
