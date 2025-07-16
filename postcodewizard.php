@@ -1,9 +1,15 @@
 <?php
+/**
+ * PostcodeWizard Module
+ *
+ * @author    FlowEngine
+ * @copyright Copyright (c) 2025 FlowEngine
+ * @license   https://opensource.org/licenses/MIT MIT License
+ */
 
 require_once __DIR__ . '/classes/PostcodeWizardHelper.php';
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 
 if (!defined('_PS_VERSION_')) {
     exit;
@@ -18,13 +24,12 @@ class PostcodeWizard extends Module
         $this->version = '1.0.0';
         $this->author = 'FlowEngine';
         $this->need_instance = 0;
-
         $this->bootstrap = true;
+
         parent::__construct();
 
-        $this->displayName = $this->l('PostcodeWizard');
-        $this->description = $this->l('Zoek een adres of vul je postcode + huisnummer in, PostcodeWizard vult de rest automagisch aan.');
-
+        $this->displayName = $this->trans('PostcodeWizard', [], 'Modules.PostcodeWizard.Admin');
+        $this->description = $this->trans('Zoek een adres of vul je postcode + huisnummer in, PostcodeWizard vult de rest automagisch aan.', [], 'Modules.PostcodeWizard.Admin');
         $this->ps_versions_compliancy = ['min' => '1.7.0.0', 'max' => _PS_VERSION_];
     }
 
@@ -180,15 +185,12 @@ class PostcodeWizard extends Module
             </script>
         ';
 
-
-
-
         return $output . $this->renderForm();
     }
 
     protected function renderForm()
     {
-        $default_lang = (int)Configuration::get('PS_LANG_DEFAULT');
+        $default_lang = (int) Configuration::get('PS_LANG_DEFAULT');
 
         $fields_form[0]['form'] = [
             'legend' => [
@@ -221,8 +223,8 @@ class PostcodeWizard extends Module
             ],
             'submit' => [
                 'title' => $this->l('Opslaan'),
-                'class' => 'btn btn-default pull-right'
-            ]
+                'class' => 'btn btn-default pull-right',
+            ],
         ];
 
         $helper = new HelperForm();

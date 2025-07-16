@@ -1,10 +1,21 @@
 <?php
-
+/**
+ * PostcodeWizard Module
+ *
+ * @author    FlowEngine
+ * @copyright Copyright (c) 2025 FlowEngine
+ * @license   https://opensource.org/licenses/MIT MIT License
+ */
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 class PostcodeWizardHelper
 {
-    public static function getApiEndpoint() {
+    public static function getApiEndpoint()
+    {
         return 'https://api.postcodewizard.nl/';
     }
+
     public static function getApiKey()
     {
         return Configuration::get('POSTCODEWIZARD_API_KEY');
